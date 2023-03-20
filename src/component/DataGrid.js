@@ -11,6 +11,7 @@ import GridRow from './GridRow';
 import GrindSubHeader from './GridSubHeader';
 import ScenariosChart from './ScenariosChart';
 import StepsChart from './StepsChart';
+import SummaryRow from './SummaryRow';
 
 const DataGrid = () => {
   const classes = useStyles();
@@ -37,13 +38,13 @@ const DataGrid = () => {
       name:"demo/callarray/call-json",
       steps:{"passed":16,"failed":0,"skipped":5,"undefined":0,"pending":0,"total":21},
       scenarios:{"passed":0,"failed":1,"total":1},
-      features:{"duration":"148ms","status":"failed"},
+      features:{"duration":"1s 48ms","status":"failed"},
     },
     {
       name:"demo/callarray/call-json",
       steps:{"passed":0,"failed":5,"skipped":0,"undefined":0,"pending":0,"total":5},
       scenarios:{"passed":1,"failed":0,"total":1},
-      features:{"duration":"148ms","status":"passed"},
+      features:{"duration":"1s 408ms","status":"passed"},
     }
   ]
   const pagination = {
@@ -88,6 +89,7 @@ const DataGrid = () => {
             return <GridRow key={index} data={item}/>
           })
        }
+        <SummaryRow data={data}/>
           </Grid>
         </div>
         </Fragment>
