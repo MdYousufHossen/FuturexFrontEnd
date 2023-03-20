@@ -1,13 +1,13 @@
 import React from 'react';
-import TableData from '../component/TableData';
+import DataGrid from '../component/DataGrid';
 
 const Home = () => {
     return (
         <div style={{margin:"20px 10px"}}>
-        
-        
-       <TableData/>
-        
+
+       {/* <TableData/> */}
+     
+        <DataGrid/>
         </div>
        
     );

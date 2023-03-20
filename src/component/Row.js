@@ -52,7 +52,7 @@ const Row = ({rowData,index,setCallServer}) => {
         }/>:rowData.email}</TableCell>
 
         <TableCell >{editable?<input onChange={(e)=>setSalary(e.target.value)} defaultValue={rowData.salary
-        }/>:rowData.salary}</TableCell>
+        }/>:"$"+ rowData.salary}</TableCell>
 
         <TableCell >{editable?<input onChange={(e)=>setDate(e.target.value)} defaultValue={rowData.date
         }/>:rowData.date}</TableCell>

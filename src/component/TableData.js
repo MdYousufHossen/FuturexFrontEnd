@@ -22,8 +22,6 @@ const [callServer,setCallServer] = React.useState(false)
  }, [callServer])
   return (
     <Fragment>
-
-   
     <AddEmployeeModal setCallServer={setCallServer}/>
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -46,6 +44,7 @@ const [callServer,setCallServer] = React.useState(false)
         </TableBody>
       </Table>
     </TableContainer>
+    
     </Fragment>
   );
 }
