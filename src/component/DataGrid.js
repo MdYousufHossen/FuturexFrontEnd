@@ -1,6 +1,6 @@
-import { Grid, Typography } from '@mui/material';
+import { Box, Grid, Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Navigation, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -54,8 +54,9 @@ const DataGrid = () => {
     },
   };
     return (
-        <Fragment>
-            <Swiper
+        <>
+     
+       <Swiper
         pagination={pagination}
         modules={[Pagination,Navigation]}
         navigation={true}
@@ -74,14 +75,11 @@ const DataGrid = () => {
           <Typography className={classes.pieTitle}>Features</Typography>
           <FeaturesChart tableData={data}/>
           
-       </SwiperSlide>
-       
-      
-        
+       </SwiperSlide> 
       </Swiper>
-          
-          <div>
-         <Grid className={classes.borderLine} container>
+     
+          <Box className={classes.subContainer} >
+         <Grid className={classes.tableContainer} container>
         <GridHeader/>
         <GrindSubHeader/>
        {
@@ -91,14 +89,23 @@ const DataGrid = () => {
        }
         <SummaryRow data={data}/>
           </Grid>
-        </div>
-        </Fragment>
+        </Box>
+       
+        </>
     );
 };
 const useStyles =makeStyles({
-  borderLine:{
+ 
+  subContainer:{
+    width:"100% !important",
+  
+    overflowX:"scroll !important",
+    overflowY:"scroll !important",
+  },
+  tableContainer:{
     border:"1px solid black !important",
-    textAlign:"center"
+    textAlign:"center",
+    width:"1300px !important",
   },
   text:{
     fontWeight:"bold !important",
